@@ -1,1 +1,1 @@
-console.log("wazaaaaaap!!!")
+console.log("time to start")
