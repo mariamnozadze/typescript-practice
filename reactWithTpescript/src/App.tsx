@@ -1,12 +1,23 @@
 import { useState } from "react";
-import { User } from "./Person";
+import { User, Countries } from "./Person";
+import { UserProvider } from "./UserContextProvider";
 
 function App() {
   return (
-    <>
-      <User name={"Mariam"} age={25} isEmployed={true}></User>
-      <User name={"Sarah"} age={32} isEmployed={false}></User>
-    </>
+    <UserProvider>
+      <User
+        name={"Mariam"}
+        age={25}
+        isEmployed={true}
+        country={Countries.Georgia}
+      ></User>
+      <User
+        name={"Sarah"}
+        age={32}
+        isEmployed={false}
+        country={Countries.Canada}
+      ></User>
+    </UserProvider>
   );
 }
 
